@@ -1,17 +1,15 @@
 pipeline {
     agent any
     stages {
-
-        stages {
         stage('Install ddeps') {
             steps {
                 sh 'sudo dnf install python3 python3-pip'
-                sh  'pip3 install Flask'
+                sh 'pip3 install Flask'
                 echo "Installing missing flask using pip"
                 sleep 5
             }
         }
-            
+           
         stage('Run the App') {
             steps {
                 sh 'python3 app.py &'
@@ -33,5 +31,4 @@ pipeline {
             }
         }
     }
-}
 }
