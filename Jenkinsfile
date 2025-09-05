@@ -1,15 +1,7 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Install Packages') {
-            steps {
-                script {
-                    sh 'pip install flask flask_sqlalchemy'
-                    sh 'echo "done flask install sqlalchemy!!!"'
-                }
-            }
-        }
+
 
         stage('Run the App') {
             steps {
