@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     sh 'pip install flask flask_sqlalchemy'
+                    sh 'echo "done flask install sqlalchemy!!!"'
                 }
             }
         }
@@ -14,6 +15,7 @@ pipeline {
             steps {
                 script {
                     sh 'python3 app.py &'
+                    sh 'echo "done running app!!!"'
                     sleep 5
                 }
             }
@@ -23,6 +25,7 @@ pipeline {
             steps {
                 script {
                     sh 'curl http://localhost:5000/'
+                    sh 'echo "rendering app on port 5000!!!"'
                 }
             }
         }
