@@ -4,7 +4,7 @@ pipeline {
         stage('Install ddeps') {
             steps {
                 sh 'sudo dnf install python3 python3-pip -y'
-                sh 'pip3 install Flask -y'
+                sh 'sudo dnf install python3-flask'
                 echo "Installing missing flask using pip"
                 sleep 5
             }
