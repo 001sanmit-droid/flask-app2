@@ -3,7 +3,7 @@ pipeline {
     stages {
 
         stages {
-        stage('Run the App') {
+        stage('Install ddeps') {
             steps {
                 sh 'sudo dnf install python3 python3-pip'
                 sh  'pip3 install Flask'
